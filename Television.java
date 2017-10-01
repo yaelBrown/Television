@@ -20,7 +20,7 @@ public class Television {
 	public Television(int chan, boolean work, boolean on) {
 		isOn = on;
 		working = work;
-		currentChannel = 01;
+		currentChannel = chan;
 	}
 	
 	// Setters
@@ -46,7 +46,7 @@ public class Television {
 	}
 	
 	public int getCurrentChannel() {
-		return this.currentChannel;
+		return currentChannel;
 	}
 	
 	// toString method
@@ -61,6 +61,9 @@ public class Television {
 public static void main(String[] args) {
 	// Test case 1
 	Television Zenith = new Television(12, true, true);
+	
+	// See what channel the TV is on.
+	System.out.println("The Zenith is on channel " + Zenith.getCurrentChannel());
 	
 	// Check if the TV is on. 
 	if (Zenith.getIsOn()) {
